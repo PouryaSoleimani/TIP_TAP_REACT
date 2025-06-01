@@ -40,6 +40,7 @@ const TipTapEditor = () => {
                     <Button onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()} style={{ margin: "0 1rem" }} className={editor.isActive('heading', { level: 3 }) ? 'is-active' : ''}  >     H3 </Button>
                 </Flex>
             </div>
+            <p>WRITE HERE :</p>
             <EditorContent editor={editor} value={text} className='p-5 border border-zinc-600 ' />
         </>
     )

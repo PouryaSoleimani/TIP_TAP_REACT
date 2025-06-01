@@ -5,18 +5,19 @@ import StarterKit from '@tiptap/starter-kit'
 import useArrayStore from '@/store/arrayStore'
 
 const TipTapEditor = () => {
-    const { array } = useArrayStore()
+    const { text, setText } = useArrayStore()
 
     const editor = useEditor({
         extensions: [StarterKit],
-        content: array.join("\n"),
+        content: text,
         onUpdate: ({ editor }) => {
             const content = editor.getHTML()
-            console.log(content)
+            setText(content)
+            console.info("TEXT===>", text)
         },
     })
 
-    return <EditorContent editor={editor} value={array.join("\n")} />
+    return <EditorContent editor={editor} value={text} />
 }
 
 export default TipTapEditor

@@ -13,7 +13,7 @@ const useArrayStore = create<ArrayStore>()(
   persist(
     (set) => ({
       array: ["ALI", "REZA", "MAHDI"],
-      text: "HELLO WORLD",
+      text: "🟩 HELLO ZUSTAND !!",
       setText: (text) => set({ text }),
       add: (item) => set((state) => ({ array: [...state.array, item] })),
       remove: (item) =>

@@ -6,7 +6,7 @@ import Document from '@tiptap/extension-document'
 import Heading from '@tiptap/extension-heading'
 import Paragraph from '@tiptap/extension-paragraph'
 import Text from '@tiptap/extension-text'
-import { Button } from '@chakra-ui/react'
+import { Button, Flex } from '@chakra-ui/react'
 
 const TipTapEditor = () => {
     const { text, setText } = useArrayStore()
@@ -26,19 +26,19 @@ const TipTapEditor = () => {
     return (
         <>
             <div className="control-group">
-                <div className="button-group">
-                    <Button onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()} className={editor.isActive('heading', { level: 1 }) ? 'is-active' : ''} >
+                <Flex className="button-group space-x-4">
+                    <Button onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()} style={{ margin: "0 1rem" }} className={editor.isActive('heading', { level: 1 }) ? 'is-active' : ''} >
                         H1
                     </Button>
-                    <Button onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()} className={editor.isActive('heading', { level: 2 }) ? 'is-active' : ''} >
+                    <Button onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()} style={{ margin: "0 1rem" }} className={editor.isActive('heading', { level: 2 }) ? 'is-active' : ''} >
                         H2
                     </Button>
-                    <Button onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()} className={editor.isActive('heading', { level: 3 }) ? 'is-active' : ''}  >
+                    <Button onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()} style={{ margin: "0 1rem" }} className={editor.isActive('heading', { level: 3 }) ? 'is-active' : ''}  >
                         H3
                     </Button>
-                </div>
+                </Flex>
             </div>
-            <EditorContent editor={editor} value={text} />
+            <EditorContent editor={editor} value={text} className='p-5 border border-zinc-600 ' />
         </>
     )
 }

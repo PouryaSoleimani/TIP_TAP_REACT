@@ -3,7 +3,7 @@ import TipTapEditor from "@/components/TipTapEditor";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="w-screen h-screen flex flex-col items-center justify-center gap-5">
       <h1>TIP_TAP_REACT</h1>
       <TipTapEditor />
       <ShowUpdatedText />

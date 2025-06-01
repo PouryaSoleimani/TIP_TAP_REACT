@@ -27,15 +27,9 @@ const TipTapEditor = () => {
         <>
             <div className="control-group">
                 <Flex className="button-group space-x-4">
-                    <Button onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()} style={{ margin: "0 1rem" }} className={editor.isActive('heading', { level: 1 }) ? 'is-active' : ''} >
-                        H1
-                    </Button>
-                    <Button onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()} style={{ margin: "0 1rem" }} className={editor.isActive('heading', { level: 2 }) ? 'is-active' : ''} >
-                        H2
-                    </Button>
-                    <Button onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()} style={{ margin: "0 1rem" }} className={editor.isActive('heading', { level: 3 }) ? 'is-active' : ''}  >
-                        H3
-                    </Button>
+                    <Button onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()} style={{ margin: "0 1rem" }} className={editor.isActive('heading', { level: 1 }) ? 'is-active' : ''} >        H1    </Button>
+                    <Button onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()} style={{ margin: "0 1rem" }} className={editor.isActive('heading', { level: 2 }) ? 'is-active' : ''} >     H2 </Button>
+                    <Button onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()} style={{ margin: "0 1rem" }} className={editor.isActive('heading', { level: 3 }) ? 'is-active' : ''}  >     H3 </Button>
                 </Flex>
             </div>
             <EditorContent editor={editor} value={text} className='p-5 border border-zinc-600 ' />
